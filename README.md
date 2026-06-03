@@ -41,7 +41,7 @@ O sistema será utilizado por proprietários e funcionários responsáveis pelo 
 9. Toda movimentação de entrada ou saída deve ser registrada em arquivo.
 10. O sistema deve emitir um alerta quando a quantidade de um produto estiver abaixo do estoque mínimo definido.
 
-### Organização das Tarefas (Trello)
+### Organização das Tarefas
 
 **Etapa 1 – Planejamento**
 
