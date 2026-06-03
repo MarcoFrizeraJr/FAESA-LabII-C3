@@ -30,16 +30,15 @@ O sistema será utilizado por proprietários e funcionários responsáveis pelo 
 
 ### **Regras de Negócio**
 
-1. Cada produto deve possuir um código único.
-2. Não é permitido cadastrar produtos com preço menor ou igual a zero.
-3. Não é permitido cadastrar produtos com quantidade inicial negativa.
-4. A entrada de estoque deve aumentar a quantidade disponível do produto.
-5. A saída de estoque só pode ser realizada se houver quantidade suficiente disponível.
-6. O sistema não deve permitir que o estoque fique negativo.
-7. Produtos perecíveis devem possuir uma data de validade válida.
-8. Não é permitido excluir um produto que possua movimentações registradas.
-9. Toda movimentação de entrada ou saída deve ser registrada em arquivo.
-10. O sistema deve emitir um alerta quando a quantidade de um produto estiver abaixo do estoque mínimo definido.
+1. Produtos recém-chegados devem ser armazenados seguindo a organização definida pela categoria.
+2. Produtos com maior saída devem ter prioridade na reposição do estoque.
+3. O sistema deve permitir a reserva de produtos para pedidos futuros.
+4. O sistema deve permitir o bloqueio temporário de produtos para conferência de inventário.
+5. Produtos devolvidos devem passar por uma etapa de verificação antes de retornar ao estoque.
+6. O estoque deve possuir um limite máximo para evitar excesso de armazenamento.
+7. Produtos danificados devem ser separados do estoque disponível para uso ou venda.
+8. O inventário deve permitir comparar a quantidade física com a quantidade registrada.
+
 
 ### Organização das Tarefas
 
