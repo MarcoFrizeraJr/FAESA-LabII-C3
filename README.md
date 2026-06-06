@@ -30,14 +30,98 @@ O sistema será utilizado por proprietários e funcionários responsáveis pelo 
 
 ### **Regras de Negócio**
 
-1. Produtos recém-chegados devem ser armazenados seguindo a organização definida pela categoria.
-2. Produtos com maior saída devem ter prioridade na reposição do estoque.
-3. O sistema deve permitir a reserva de produtos para pedidos futuros.
-4. O sistema deve permitir o bloqueio temporário de produtos para conferência de inventário.
-5. Produtos devolvidos devem passar por uma etapa de verificação antes de retornar ao estoque.
-6. O estoque deve possuir um limite máximo para evitar excesso de armazenamento.
-7. Produtos danificados devem ser separados do estoque disponível para uso ou venda.
-8. O inventário deve permitir comparar a quantidade física com a quantidade registrada.
+**DADOS DO SISTEMA**
+
+Usuário:
+
+* id
+* nome
+* cargo (Funcionário ou Gerente)
+
+Produto:
+
+* id
+* nome
+* quantidade em estoque
+* quantidade mínima
+* preço de custo
+* preço de venda
+
+Movimentação:
+
+* id
+* produto
+* tipo (Entrada ou Saída)
+* quantidade
+* responsável
+* data e hora
+
+Solicitação de Reposição:
+
+* id
+* produto
+* quantidade solicitada
+* responsável pela solicitação
+* status (Pendente, Aprovada ou Recusada)
+
+**CONTAS DE USUÁRIO**
+
+O sistema possuirá dois tipos de usuários: Funcionário e Gerente.
+Os Funcionários poderão consultar produtos, registrar movimentações de entrada e saída e solicitar reposição de mercadorias.
+Os Gerentes possuirão acesso completo ao sistema, podendo gerenciar produtos, usuários, aprovar reposições e corrigir movimentações realizadas incorretamente.
+Somente os Gerentes poderão remover produtos cadastrados.
+
+**CONTROLE DE ESTOQUE**
+
+Toda movimentação de entrada aumentará automaticamente a quantidade disponível do produto.
+Toda movimentação de saída reduzirá automaticamente a quantidade disponível do produto.
+O sistema não permitirá registrar saídas superiores à quantidade disponível em estoque.
+Produtos sem estoque disponível não poderão sofrer novas movimentações de saída.
+
+**CONTROLE DE ESTOQUE MÍNIMO**
+
+Cada produto possuirá uma quantidade mínima definida durante o cadastro.
+Quando a quantidade disponível atingir ou ficar abaixo desse limite, o sistema classificará o produto como "Estoque Baixo".
+Produtos classificados como "Estoque Baixo" gerarão automaticamente uma solicitação de reposição pendente.
+
+**PROCESSO DE REPOSIÇÃO**
+
+As solicitações de reposição poderão ser criadas automaticamente pelo sistema ou manualmente pelos Funcionários.
+Toda solicitação deverá ser analisada por um Gerente.
+Somente após a aprovação da solicitação será permitida a entrada da nova mercadoria no estoque.
+Solicitações recusadas permanecerão registradas para fins de auditoria.
+
+**GERENCIAMENTO DE MOVIMENTAÇÕES**
+
+Toda movimentação deverá armazenar o usuário responsável e a data da operação.
+Movimentações não poderão ser excluídas diretamente.
+Caso uma movimentação tenha sido registrada incorretamente, o sistema realizará uma movimentação inversa para corrigir o estoque, preservando o histórico das operações.
+Somente Gerentes poderão autorizar correções.
+
+**RELATÓRIOS**
+
+O sistema permitirá a geração de relatórios contendo:
+* Produtos em estoque;
+* Produtos com estoque baixo;
+* Histórico de movimentações;
+* Produtos mais movimentados;
+* Solicitações de reposição pendentes.
+
+**SALVAMENTO DOS DADOS**
+
+Os dados serão gravados automaticamente em arquivos de texto (.txt) após:
+
+* Cadastro de produto;
+* Alteração de produto;
+* Exclusão de produto;
+* Cadastro de usuário;
+* Registro de movimentação;
+* Criação de solicitação de reposição;
+* Aprovação ou recusa de solicitação;
+* Correção de movimentações.
+
+Ao iniciar o sistema, todas as informações serão carregadas dos arquivos para a memória da aplicação.
+
 
 
 ### Organização das Tarefas
