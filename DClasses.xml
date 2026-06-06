@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="page-1" name="Page-1">
+    <mxGraphModel dx="1278" dy="663" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="light-dark(#FFFFFF,#000000)" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="usuario" parent="1" style="swimlane;fontStyle=1;align=center;spacingTop=4;html=1;fontSize=14;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;labelBorderColor=none;" value="Usuario" vertex="1">
+          <mxGeometry height="160" width="200" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="usuario_attr" parent="usuario" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=14;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;" value="- id: int&#xa;- nome: string&#xa;- cargo: string" vertex="1">
+          <mxGeometry height="60" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="usuario_meth" parent="usuario" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=14;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;" value="+ autenticar(): bool&#xa;- desativar(): void" vertex="1">
+          <mxGeometry height="50" width="200" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="movimentacao" parent="1" style="swimlane;fontStyle=1;align=center;spacingTop=4;html=1;fontSize=14;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;" value="Movimentacao" vertex="1">
+          <mxGeometry height="160" width="200" x="160" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="mov_attr" parent="movimentacao" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=14;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;" value="- id: int&#xa;- quantidade: int&#xa;- data: DateTime" vertex="1">
+          <mxGeometry height="60" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mov_meth" parent="movimentacao" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=14;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;" value="+ registrar(): void&#xa;- cancelar(): void" vertex="1">
+          <mxGeometry height="50" width="200" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="entrada" parent="1" style="swimlane;fontStyle=1;align=center;spacingTop=4;html=1;fontSize=14;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;" value="Entrada" vertex="1">
+          <mxGeometry height="100" width="160" x="60" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_attr" parent="entrada" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=14;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;" value="- id: int&#xa;- quantidade: int" vertex="1">
+          <mxGeometry height="40" width="160" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="saida" parent="1" style="swimlane;fontStyle=1;align=center;spacingTop=4;html=1;fontSize=14;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;" value="Saida" vertex="1">
+          <mxGeometry height="100" width="160" x="260" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="sai_attr" parent="saida" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=14;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;" value="- id: int&#xa;- quantidade: int" vertex="1">
+          <mxGeometry height="40" width="160" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tipo_mov" parent="1" style="swimlane;fontStyle=1;align=center;spacingTop=4;html=1;fontSize=14;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;" value="TipoMovimentacao" vertex="1">
+          <mxGeometry height="100" width="160" x="500" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="tipo_val" parent="tipo_mov" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=14;fontStyle=2;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;" value="ENTRADA&#xa;SAIDA" vertex="1">
+          <mxGeometry height="40" width="160" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="usuario" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;fontFamily=Helvetica;fontColor=default;strokeWidth=1;endArrow=block;labelBackgroundColor=none;" target="movimentacao" value="realiza">
+          <mxGeometry relative="1" x="0.0381" y="-43" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="movimentacao" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;fontSize=14;fontFamily=Helvetica;fontColor=default;strokeWidth=1;endArrow=block;labelBackgroundColor=none;" target="produto" value="refere-se a">
+          <mxGeometry relative="1" x="-0.2166" y="-41" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="movimentacao" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;fontFamily=Helvetica;fontSize=14;fontColor=default;strokeWidth=1;endArrow=block;labelBackgroundColor=none;" target="tipo_mov">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="her1" edge="1" parent="1" source="entrada" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=14;fontColor=default;strokeWidth=1;endArrow=block;labelBackgroundColor=none;" target="movimentacao">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="her2" edge="1" parent="1" source="saida" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=14;fontColor=default;strokeWidth=1;endArrow=block;labelBackgroundColor=none;" target="movimentacao">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="produto" parent="1" style="swimlane;fontStyle=1;align=center;spacingTop=4;html=1;fontSize=14;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;" value="Produto" vertex="1">
+          <mxGeometry height="180" width="220" x="350" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="produto_attr" parent="produto" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=14;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;" value="- id: int&#xa;- nome: string&#xa;- quantidade: int&#xa;- preco: decimal" vertex="1">
+          <mxGeometry height="70" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="produto_meth" parent="produto" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=14;fontFamily=Helvetica;strokeWidth=1;rounded=1;whiteSpace=wrap;labelBackgroundColor=none;" value="+ atualizarEstoque(qtd: int): void&#xa;- isEstoqueBaixo(): bool" vertex="1">
+          <mxGeometry height="50" width="220" y="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
